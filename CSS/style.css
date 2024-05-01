@@ -1,0 +1,271 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+.header {
+    background-color: #fff;
+    color: #000;
+    padding: 20px 0;
+    overflow: hidden;
+    text-align: center; /* Center align header content */
+}
+
+.logo {
+    display: inline-block; /* To center align */
+}
+
+.menu {
+    display: inline-block; /* To center align */
+}
+
+.menu ul {
+    list-style-type: none;
+}
+
+.menu ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+}
+
+
+
+/* Dropdown Menu for Mobile */
+.dropdown-menu {
+    display: none; /* Hidden by default */
+}
+
+.dropdown-menu.active {
+    display: block;
+    position: absolute;
+    top: 100%; /* Position below the hamburger button */
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    z-index: 999;
+}
+
+@media (min-width: 769px) {
+    .dropdown-menu {
+        display: none; /* Hide dropdown on screens larger than 768px */
+    }
+}
+
+.dropdown-menu ul li {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.dropdown-menu ul li a {
+    display: block;
+    color: #000;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+/* Content Styles */
+.content {
+    padding: 20px;
+}
+
+.intro {
+    margin-bottom: 40px;
+    text-align: center; /* Center align intro content */
+}
+
+.intro h1 {
+    font-size: 3rem; /* Increased font size */
+}
+
+.intro p {
+    font-size: 1.5rem; /* Increased font size */
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center; /* Center align section titles */
+}
+
+/* Destination Styles */
+.top-destination,
+.trending-packages,
+.weekend-packages,
+.international-packages {
+    padding: 20px;
+}
+
+.destination-item,
+.package-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Added space-around */
+}
+
+.destination,
+.package {
+    width: calc(25% - 20px); /* Adjusted width for desktop */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.destination img,
+.package img {
+    width: 100%; /* Set width to 100% */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    border-radius: 15px;
+}
+
+.destination-info,
+.package-info {
+    margin-top: 10px;
+}
+
+.destination-info p,
+.package-info p {
+    font-size: 1.2rem;
+}
+
+.destination-info a,
+.package-info a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    padding: 8px 20px;
+    border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .menu {
+        display: none; /* Hide the menu by default on mobile */
+    }
+
+    /* Show hamburger menu icon */
+    .hamburger {
+        display: block;
+        float: left;
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .dropdown-menu {
+        display: none; /* Hide dropdown by default */
+    }
+
+    .dropdown-menu.active {
+        display: block; /* Show when active */
+    }
+
+    .header {
+        padding: 10px 0; /* Reduce padding */
+    }
+
+    .section-title {
+        font-size: 1.8rem; /* Responsive font size */
+    }
+
+    .intro h1 {
+        font-size: 2.5rem; /* Responsive font size */
+    }
+
+    .intro p {
+        font-size: 1.2rem; /* Responsive font size */
+    }
+
+    .destination,
+    .package {
+        width: calc(50% - 20px); /* Adjusted width for mobile */
+    }
+
+    .destination img,
+    .package img {
+        height: auto; /* Set auto height for responsiveness */
+    }
+
+    .footer-column {
+        width: 100%; /* Full width on mobile */
+        text-align: center; /* Center align text */
+        margin-bottom: 30px; /* Increased margin */
+    }
+
+    .footer-column p {
+        font-size: 1rem; /* Adjusted font size for responsiveness */
+    }
+
+    .footer-column p:first-child {
+        font-size: 1.2rem; /* Adjusted font size for responsiveness */
+    }
+
+    .footer-column a img {
+        width: 25px; /* Adjusted size for social icons */
+        height: 25px; /* Adjusted size for social icons */
+        margin: 5px;
+    }
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    height: 150px;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-column {
+    width: 25%;
+    float: left;
+    margin-bottom: 20px; /* Added margin-bottom */
+}
+
+.footer-column p {
+    font-size: 1.2rem;
+}
+
+.footer-column p:first-child {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.footer-column a img {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+}
